@@ -1,0 +1,175 @@
+@media(max-width: 1023px)
+{
+	header .container, main .container
+	{
+		width: 728px;
+	}
+	.table-header .id-th, .id-td
+	{
+		width: 81px;
+		padding-left: 20px;
+	}
+	.id-td
+	{
+		padding: 0;
+		font-size: 9px;
+	}
+	.fio-th, .fio-td
+	{
+		width: 218px;
+	}
+	.datetime-created-th, .datetime-created-td
+	{
+		width: 99px;
+	}
+	.datetime-updated-th, .datetime-updated-td
+	{
+		width: 98px;
+	}
+	.times
+	{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 4px;
+	}
+	.contacts-th, .contacts-td
+	{
+		width: 131px;
+	}
+	.contacts-td
+	{
+		padding-right: 20px;
+	}
+	.t-contact-wrapper:hover .t-contact-data-wrapper
+	{
+		display: none;
+	}
+	.t-contact-wrapper:hover img
+	{
+		opacity: .7;
+	}
+	.t-contact-wrapper.contact-clicked:hover .t-contact-data-wrapper
+	{
+		display: block;
+	}
+	.t-contact-wrapper.contact-clicked:hover img
+	{
+		opacity: 1;
+	}
+	.actions-th, .actions-td
+	{
+		width: 103px;
+	}
+}
+@media(max-width: 767px)
+{
+	header
+	{
+		margin-bottom: 30px;
+	}
+	header .container, main .container
+	{
+		width: 100%;
+		justify-content: center;
+	}
+	header .container
+	{
+		padding: 8px 0;
+	}
+	header a
+	{
+		margin-right: 0;
+	}
+	header img
+	{
+		width: 24px;
+	}
+	#search-field
+	{
+		display: none;
+	}
+	main h1
+	{
+		margin-left: 10px;
+		font-size: 18px;
+	}
+	#loading
+	{
+		align-self: start;
+		margin-left: calc(50vw - 10px);
+		transform: translateX(-50%);
+	}
+	.mobile-wrapper
+	{
+		width: 100%;
+		max-width: 100%;
+		margin-bottom: 40px;
+		overflow-x: auto;
+		-ms-overflow-style: none;  /* cancel scrollbar IE 10+ */
+		scrollbar-width: none; /* cancel scrollbar Firefox */
+	}
+	.mobile-wrapper::-webkit-scrollbar /* cancel scrollbar chrome based */
+	{
+		display: none;
+		width: 0;
+	}
+	.mobile-padding
+	{
+		width: 748px;
+		padding: 0 10px;
+	}
+	.table-header, #clients-table
+	{
+		width: 728px;
+	}
+	#clients-table
+	{
+		margin-bottom: 0;
+	}
+	.modal-client-wrapper
+	{
+		left: calc(50vw - 150px);
+		width: 300px;
+	}
+	#modal-close-btn, #delete-modal-close-btn
+	{
+		top: 10px;
+		right: 10px;
+	}
+	#modal-client #new-client-h2
+	{
+		padding: 0 15px;
+	}
+	.change-client-h2
+	{
+		width: 115px;
+		padding-left: 15px;
+	}
+	.fio-inputs-wrapper
+	{
+	  padding: 0 15px;
+	}
+	.contact-type-wrapper
+	{
+		width: 110px;
+		background-position-x: 91px;
+	}
+	.contact-type-select
+	{
+		width: 110px;
+	}
+	.contact-data
+	{
+		width: 160px;
+		padding: 8px 6px;
+	}
+	.contact-data.less-width
+	{
+	  width: 133px;
+	}
+	.delete-confirm-modal
+	{
+		width: 300px;
+		left: calc(50vw - 150px);
+	}
+}
