@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <link rel="icon" href="imgs/header/skb-logo.svg" type="image/svg+xml">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Управление контактами</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/media-queries.css">
+	<script defer src="script.js"></script>
+</head>
+<body>
+	<div class="vh100">
+		<header>
+			<div class="container">
+				<a href="index.html"><img src="imgs/header/skb-logo.svg" alt="Логотип skb."></a>
+				<input id="search-field" type="text" placeholder="Введите запрос">
+			</div>
+		</header>
+		<main>
+			<div class="container">
+				<h1>Клиенты</h1>
+				<div class="mobile-wrapper">
+					<div class="mobile-padding">
+						<table class="table-header">
+							<tr>
+								<th class="sorted id-th" id="id-th">ID <img src="imgs/table-header/sort-arrow-ascending.svg" alt="Иконка сортировки"></th>
+								<th class="fio-th" id="fio-th">Фамилия Имя Отчество <img src="imgs/table-header/sort-arrow-ascending.svg" alt="Иконка сортировки"> <span id="aya">А-Я</span></th>
+								<th class="datetime-created-th" id="datetime-created-th">Дата и время создания <img src="imgs/table-header/sort-arrow-ascending.svg" alt="Иконка сортировки"></th>
+								<th class="datetime-updated-th" id="datetime-updated-th">Последние изменения <img src="imgs/table-header/sort-arrow-ascending.svg" alt="Иконка сортировки"></th>
+								<th class="contacts-th">Контакты</th>
+								<th class="actions-th">Действия</th>
+							</tr>
+						</table>
+						<div id="loading-or-empty">
+							<img id="loading" src="imgs/loading.svg" alt="Идёт загрузка... Иконка загрузки">
+							<div class="display-none" id="empty">
+								<p>Список клиентов пуст.</p>
+								<p>Для добавления нажмите на кнопку ниже.</p>
+							</div>
+						</div>
+						<table id="clients-table">
+						</table>
+					</div>
+				</div>
+				<div class="add-btn-container">
+					<button id="add-client-btn">Добавить клиента</button>
+				</div>
+			</div>
+			<div id="modal-add-change-wrapper">
+				<div class="modal-client-wrapper">
+					<div id="modal-client">
+						<div id="modal-close-btn"></div>
+						<h2 id="new-client-h2">Новый клиент</h2>
+						<div id="change-client-h2-wrap">
+							<h2 class="change-client-h2">Изменить данные</h2>
+							<div id="id-change-modal">ID: 12341314</div>
+						</div>
+						<div class="fio-inputs-wrapper">
+							<div class="surname-inp-wrap">
+								<input id="surname-inp" type="text" required>
+								<label id="surname-label" for="surname-inp">Фамлиля<span class="star">*</span></label>
+							</div>
+							<div class="name-inp-wrap">
+								<input id="name-inp" type="text" required>
+								<label id="name-label" for="name-inp">Имя<span class="star">*</span></label>
+							</div>
+							<div class="lastname-inp-wrap">
+								<input id="lastname-inp" type="text">
+								<label id="lastname-label" for="lastname-inp">Отчество</label>
+							</div>
+						</div>
+						<div id="add-contacts-and-btn-wrapper">
+							<div id="add-contacts-wrapper" class="contacts"></div>
+							<button id="add-contact-btn">Добавить контакт</button>
+						</div>
+						<div id="error-msg"></div>
+						<div class="save-cancel-delete-btns-wrap">
+							<a id="save-client-btn" href=""><img src="imgs/modals/save-loading.svg"> Сохранить</a>
+							<a class="cancel-delete-btns" id="cancel-new-client-btn" href="">Отмена</a>
+							<a class="cancel-delete-btns dn" id="delete-client-btn" href="">Удалить клиента</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="delete-confirm-modal-bg">
+				<div class="delete-confirm-modal">
+					<div id="delete-modal-close-btn"></div>
+					<h2>Удалить клиента</h2>
+					<p>Вы действительно хотите удалить данного клиента?</p>
+					<button id="delconfirm-client-btn">Удалить</button>
+					<button id="cancel-delete-btn">Отмена</button>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
